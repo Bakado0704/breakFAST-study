@@ -1,10 +1,13 @@
 import { useEffect, useState } from 'react';
 
+import { useRouter } from 'next/navigation';
+
 import { fetchUser } from '@/service/fetchUser';
-import { User } from '@/types/User.types';
+import { UserDB } from '@/types/UserDB.types';
 
 export const useTopPage = () => {
-  const [user, setUser] = useState<User | null>(null);
+  const router = useRouter();
+  const [user, setUser] = useState<UserDB | null>(null);
 
   useEffect(() => {
     const getUser = async () => {
@@ -14,7 +17,12 @@ export const useTopPage = () => {
     getUser();
   }, []);
 
+  const navigateToInput = () => {
+    router.push('/input');
+  };
+
   return {
     user,
+    navigateToInput,
   };
 };

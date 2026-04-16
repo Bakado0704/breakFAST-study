@@ -3,4 +3,5 @@ export { Icon } from './Icon';
 export { Input } from './Input';
 export { InputLabel } from './InputLabel';
 export { Label } from './Label';
+export { Loader } from './Loader';
 export { Typography } from './Typography';
