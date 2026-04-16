@@ -17,6 +17,7 @@
     "{pages,components}/**/*.**": "prettier --write --ignore-unknown"
   },
   "dependencies": {
+    "classnames": "^2.5.1",
     "@hookform/resolvers": "^5.2.2",
     "firebase": "^12.11.0",
     "firebase-tools": "^15.14.0",
