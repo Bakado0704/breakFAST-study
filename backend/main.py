@@ -18,7 +18,7 @@ def read_root():
 @app.get("/user")
 def get_user():
     return {
-        "id": 1,
+        "id": "1234567890",
         "name": "Taro Yamada",
         "email": "taro@example.com",
     }
