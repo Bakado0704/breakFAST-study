@@ -3,6 +3,6 @@ import { createRepository as createCollectionRepository } from '@/firebase/facto
 import { parseUser } from '@/types/User.types';
 
 export const userRepository = createCollectionRepository({
-  path: FIRESTORE_COLLECTION_NAME.BLOG,
+  path: FIRESTORE_COLLECTION_NAME.USER,
   parseT: parseUser,
 });
