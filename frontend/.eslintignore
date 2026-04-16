@@ -1,0 +1,15 @@
+node_modules/
+
+# build outputs
+.next/
+
+# caches
+.eslintcache
+
+backend/
+
+# env files
+*.env
+*.env.*
+
+next-env.d.ts

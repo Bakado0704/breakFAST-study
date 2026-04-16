@@ -6,7 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "pnpm run lint:eslint && pnpm run lint:prettier",
+    "lint:eslint": "eslint --ext .ts,.tsx,.js,.jsx --ignore-path .eslintignore --fix .",
+    "lint:prettier": "prettier --check --ignore-unknown pages components",
+    "format": "pnpm run lint:eslint && prettier --write --list-different pages components"
+  },
+  "lint-staged": {
+    "{pages,components}/**/*.{js,jsx,ts,tsx}": "eslint --cache --fix",
+    "{pages,components}/**/*.**": "prettier --write --ignore-unknown"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
@@ -23,8 +30,20 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "16.2.3",
-    "typescript": "^5"
+    "@typescript-eslint/eslint-plugin": "^7.3.0",
+    "@typescript-eslint/parser": "^7.3.0",
+    "eslint": "8.57.1",
+    "eslint-config-next": "14.2.3",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "2.27.5",
+    "eslint-plugin-jsx-a11y": "6.7.1",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-react": "7.32.2",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "typescript": "^5",
+    "husky": "^9.1.7",
+    "prettier": "^3.3.3",
+    "lint-staged": "^15.2.7"
   }
 }

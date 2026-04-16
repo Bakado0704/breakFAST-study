@@ -1,4 +1,5 @@
 import { NavHeader } from '../NavHeader';
+
 import styles from './Layout.module.scss';
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
