@@ -2,7 +2,7 @@ import { collection, getDocs } from 'firebase/firestore';
 
 import { timestampToDate } from '@/service/timestampToDate';
 
-import { db } from '../app';
+import { db } from '../client';
 import { CustomQueryConstraint, queryRef } from '../factory/query';
 
 type Props<T> = {

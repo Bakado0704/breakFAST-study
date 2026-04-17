@@ -1,7 +1,7 @@
 import { doc, writeBatch } from 'firebase/firestore';
 
 import { FIRESTORE_COLLECTION_NAME } from '@/constants/firestore';
-import { db } from '@/firebase/app';
+import { db } from '@/firebase/client';
 import { UserDB } from '@/types/UserDB.types';
 
 type UserCreateProps = {

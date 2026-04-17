@@ -4,7 +4,7 @@ import {
   deleteDoc as firebaseDeleteDoc,
 } from 'firebase/firestore';
 
-import { db } from '../app';
+import { db } from '../client';
 
 export const deleteDoc = async ({
   path,

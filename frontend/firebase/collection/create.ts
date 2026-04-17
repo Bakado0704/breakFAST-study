@@ -1,6 +1,6 @@
 import { collection, doc, serverTimestamp, setDoc } from 'firebase/firestore';
 
-import { db } from '../app';
+import { db } from '../client';
 
 type Props<T> = {
   inputData: Omit<T, 'id' | 'updatedAt'> & {

@@ -1,6 +1,6 @@
 import { doc, getDoc } from 'firebase/firestore';
 
-import { db } from '../app';
+import { db } from '../client';
 
 export const exists = async ({
   path,

@@ -1,6 +1,6 @@
 import { collection, doc, updateDoc } from 'firebase/firestore';
 
-import { db } from '../app';
+import { db } from '../client';
 
 type Props<T> = {
   path: string;
