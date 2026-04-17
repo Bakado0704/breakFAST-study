@@ -1,16 +1,8 @@
 import { getApp, getApps, initializeApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
-import {
-  Firestore,
-  getFirestore,
-  initializeFirestore,
-} from 'firebase/firestore';
+import { getFirestore, initializeFirestore } from 'firebase/firestore';
 import { getFunctions } from 'firebase/functions';
 import { getStorage } from 'firebase/storage';
-
-interface FirestoreWithEmulator extends Firestore {
-  _settingsFrozen: unknown;
-}
 
 const clientCredentials = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
